@@ -1,4 +1,4 @@
-# has_secure_password
+g# has_secure_password
 
 ## Objectives
 
