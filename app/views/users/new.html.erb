@@ -1,0 +1,18 @@
+<h1>Sign Up</h1>
+
+<%= form_for @user do |signup_form| %>
+  
+  <% if flash[:alert] %>
+    <p><%= flash[:alert] %></p>
+  <% end %>
+  <%#= user_errors %>
+
+  <%= signup_form.label :name %><br>
+  <%= signup_form.text_field :name %><br>
+  <%= signup_form.label :password %><br>
+  <%= signup_form.password_field :password %><br>
+  <%= signup_form.label :password_confirmation, 'Password Confirmation'  %><br>
+  <%= signup_form.password_field :password_confirmation %><br>
+  
+  <%= signup_form.submit 'Sign Up' %>
+<% end %>
