@@ -1,0 +1,15 @@
+<h1>Log in</h1>
+
+<%= form_for @user, url: { controller: :sessions, action: :create} do |login_form| %>
+  
+  <% if flash[:alert] %>
+    <p><%= flash[:alert] %></p>
+  <% end %>
+
+  <%= login_form.label :name %><br>
+  <%= login_form.text_field :name %><br>
+  <%= login_form.label :password %><br>
+  <%= login_form.password_field :password %><br>
+  
+  <%= login_form.submit 'Log in' %>
+<% end %>
